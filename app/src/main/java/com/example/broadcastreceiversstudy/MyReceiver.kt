@@ -8,6 +8,7 @@ import android.widget.Toast
 class MyReceiver: BroadcastReceiver() {
     override fun onReceive(p0: Context?, p1: Intent?) {
         when(p1?.action){
+
             ACTION_CLICKED -> {
                 val count = p1.getIntExtra(EXTRA_COUNT, 0)
                 Toast.makeText(p0, "Clicked! $count", Toast.LENGTH_SHORT).show()
